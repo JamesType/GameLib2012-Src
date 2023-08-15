@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C95EA1BE-7B21-4E7A-AB80-6A59244CDF83}</ProjectGuid>
+    <RootNamespace>MinimumImplementation</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(SolutionDir)..\Configurations\app.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <Import Project="$(SolutionDir)..\Configurations\appWin.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(GAME_LIB_DIR)\3DGraphics1\include;$(ProjectDir);$(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(GAME_LIB_DIR)\3DGraphics1\lib;$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Library\Batch.cpp" />
+    <ClCompile Include="Library\Camera.cpp" />
+    <ClCompile Include="Library\File.cpp" />
+    <ClCompile Include="Library\GraphicsDatabase.cpp" />
+    <ClCompile Include="Library\IndexBuffer.cpp" />
+    <ClCompile Include="Library\Matrix34.cpp" />
+    <ClCompile Include="Library\Matrix44.cpp" />
+    <ClCompile Include="Library\Model.cpp" />
+    <ClCompile Include="Library\Texture.cpp" />
+    <ClCompile Include="Library\Vector2.cpp" />
+    <ClCompile Include="Library\Vector3.cpp" />
+    <ClCompile Include="Library\VertexBuffer.cpp" />
+    <ClCompile Include="PseudoXml\Attribute.cpp" />
+    <ClCompile Include="PseudoXml\Document.cpp" />
+    <ClCompile Include="PseudoXml\Element.cpp" />
+    <ClCompile Include="PseudoXml\Tag.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Library\Batch.h" />
+    <ClInclude Include="Library\Camera.h" />
+    <ClInclude Include="Library\File.h" />
+    <ClInclude Include="Library\GraphicsDatabase.h" />
+    <ClInclude Include="Library\IndexBuffer.h" />
+    <ClInclude Include="Library\Matrix34.h" />
+    <ClInclude Include="Library\Matrix44.h" />
+    <ClInclude Include="Library\Model.h" />
+    <ClInclude Include="Library\Texture.h" />
+    <ClInclude Include="Library\Vector2.h" />
+    <ClInclude Include="Library\Vector3.h" />
+    <ClInclude Include="Library\VertexBuffer.h" />
+    <ClInclude Include="PseudoXml\Attribute.h" />
+    <ClInclude Include="PseudoXml\Document.h" />
+    <ClInclude Include="PseudoXml\Element.h" />
+    <ClInclude Include="PseudoXml\Tag.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

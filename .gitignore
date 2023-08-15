@@ -1,0 +1,14 @@
+.git/
+.vs/
+bin/
+build/
+debug/
+release/
+lib/
+obj/
+*.user
+#*generated.h
+*.sh
+*.pl
+*.bat
+#*.obj

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1107F66B-8923-4ED2-8479-189A04730B17}</ProjectGuid>
+    <RootNamespace>Framework</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(SolutionDir)..\..\Configurations\lib1.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <Import Project="$(SolutionDir)..\..\Configurations\lib2.props" />
+  <PropertyGroup>
+    <OutDir>$(GAME_LIB_DIR)\2DTransform\lib\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <PostBuildEvent>
+      <Command>mkdir $(GAME_LIB_DIR)\2DTransform\include
+mkdir $(GAME_LIB_DIR)\2DTransform\include\GameLib
+mkdir $(GAME_LIB_DIR)\2DTransform\include\GameLib\Base
+mkdir $(GAME_LIB_DIR)\2DTransform\include\GameLib\Input
+mkdir $(GAME_LIB_DIR)\2DTransform\include\GameLib\Sound
+copy $(SolutionDir)..\include\GameLib\Base\DebugStream.h $(GAME_LIB_DIR)\2DTransform\include\GameLib\Base\
+copy src\GameLib.h $(GAME_LIB_DIR)\2DTransform\include\GameLib\
+copy src\Framework.h $(GAME_LIB_DIR)\2DTransform\include\GameLib\
+copy src\Maths.h $(GAME_LIB_DIR)\2DTransform\include\GameLib\
+xcopy $(SolutionDir)..\include\GameLib\Input $(GAME_LIB_DIR)\2DTransform\include\GameLib\Input /C /Y
+xcopy $(SolutionDir)..\include\GameLib\Sound $(GAME_LIB_DIR)\2DTransform\include\GameLib\Sound /C /Y
+copy $(SolutionDir)..\Modules\lib\*.pdb $(GAME_LIB_DIR)\2DTransform\lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\FontTextureGenerated.h" />
+    <ClInclude Include="src\Framework.h" />
+    <ClInclude Include="src\Math.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Framework.cpp" />
+    <ClCompile Include="src\Math.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

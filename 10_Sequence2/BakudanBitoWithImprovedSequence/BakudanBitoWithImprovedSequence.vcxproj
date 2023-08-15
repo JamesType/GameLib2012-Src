@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F3A114D9-AC63-4FA4-98D5-721036DDDACC}</ProjectGuid>
+    <RootNamespace>BakudanBitoWithImprovedSequence</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(SolutionDir)..\Configurations\app.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <Import Project="$(SolutionDir)..\Configurations\appWin.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(GAME_LIB_DIR)\InputDevices\include;$(ProjectDir);$(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(GAME_LIB_DIR)\InputDevices\lib;$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Game\DynamicObject.cpp" />
+    <ClCompile Include="Game\State.cpp" />
+    <ClCompile Include="Game\StaticObject.cpp" />
+    <ClCompile Include="Sequence\Ending.cpp" />
+    <ClCompile Include="Sequence\GameOver.cpp" />
+    <ClCompile Include="Sequence\Parent.cpp" />
+    <ClCompile Include="Sequence\Title.cpp" />
+    <ClCompile Include="Sequence\Game\Clear.cpp" />
+    <ClCompile Include="Sequence\Game\Failure.cpp" />
+    <ClCompile Include="Sequence\Game\Judge.cpp" />
+    <ClCompile Include="Sequence\Game\Parent.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="Sequence\Game\Pause.cpp" />
+    <ClCompile Include="Sequence\Game\Play.cpp" />
+    <ClCompile Include="Sequence\Game\Ready.cpp" />
+    <ClCompile Include="File.cpp" />
+    <ClCompile Include="Image.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Pad.cpp" />
+    <ClCompile Include="Square.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game\DynamicObject.h" />
+    <ClInclude Include="Game\State.h" />
+    <ClInclude Include="Game\StaticObject.h" />
+    <ClInclude Include="Sequence\Child.h" />
+    <ClInclude Include="Sequence\Ending.h" />
+    <ClInclude Include="Sequence\GameOver.h" />
+    <ClInclude Include="Sequence\Parent.h" />
+    <ClInclude Include="Sequence\Title.h" />
+    <ClInclude Include="Sequence\Game\Child.h" />
+    <ClInclude Include="Sequence\Game\Clear.h" />
+    <ClInclude Include="Sequence\Game\Failure.h" />
+    <ClInclude Include="Sequence\Game\Judge.h" />
+    <ClInclude Include="Sequence\Game\Parent.h" />
+    <ClInclude Include="Sequence\Game\Pause.h" />
+    <ClInclude Include="Sequence\Game\Play.h" />
+    <ClInclude Include="Sequence\Game\Ready.h" />
+    <ClInclude Include="Array2D.h" />
+    <ClInclude Include="File.h" />
+    <ClInclude Include="Image.h" />
+    <ClInclude Include="Pad.h" />
+    <ClInclude Include="Square.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
