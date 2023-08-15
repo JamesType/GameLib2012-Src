@@ -1,4 +1,4 @@
-# 「ゲームプログラマになる前に覚えておきたい技術」のソースコードをVisual Stuido 2022に対応
+# 「ゲームプログラマになる前に覚えておきたい技術」のソースコードをVisual Studio 2022に対応
 * [公式対応](https://www.shuwasystem.co.jp/support/7980html/2118.html)とは違うもの
 * Visual Studio 2022 対応(sln, vcxproj, props)
 * Unicode 対応
