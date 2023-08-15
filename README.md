@@ -1,8 +1,8 @@
 # 「ゲームプログラマになる前に覚えておきたい技術」のソースコードをVisual Studio 2022に対応
 * [公式対応](https://www.shuwasystem.co.jp/support/7980html/2118.html)とは違うもの
 * Visual Studio 2022対応(sln, vcxproj, props)
-* Unicode対応
-* ファイルをUTF-8(BOM)としてエンコードする
+* CharacterSetをUnicodeに変更
+* ファイルをUTF-8(BOM)としてエンコード
 
 # この中にあるものについて
 この中にはVisual Studio 2022用のサンプルコードその他が入っています。  
