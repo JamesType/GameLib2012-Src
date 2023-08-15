@@ -2,7 +2,7 @@
 * [公式対応](https://www.shuwasystem.co.jp/support/7980html/2118.html)とは違うもの
 * Visual Studio 2022対応(sln, vcxproj, props)
 * Unicode対応
-* コードフォーマット(UTF-8 with BOM)
+* ファイルをUTF-8(BOM)としてエンコードする
 
 # この中にあるものについて
 この中にはVisual Studio 2022用のサンプルコードその他が入っています。  
