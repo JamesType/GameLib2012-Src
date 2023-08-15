@@ -1,4 +1,7 @@
-binフォルダーとその中のコンテンツは削除してはいけません
+* ConvertToCode.exeはGameLibsのプロジェクトに利用されるので下記の対応が必要
+  * プロジェクト「ConvertToCode」を実行してConvertToCode.exeを生成する
+  * Toolsの直下にbinフォルダーを新規追加する
+  * 生成されたConvertToCode.exeをbinフォルダーに入れる
 
 * Archiver.vcxproj
   - app.props
