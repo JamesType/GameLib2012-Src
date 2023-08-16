@@ -1,4 +1,4 @@
-# 「ゲームプログラマになる前に覚えておきたい技術」のソースコードをVisual Studio 2022に対応
+# 「ゲームプログラマになる前に覚えておきたい技術」のソースコード(GameLib2012)をVisual Studio 2022に対応
 * [公式対応](https://www.shuwasystem.co.jp/support/7980html/2118.html)とは違うもの
 * Visual Studio 2022対応(sln, vcxproj, props)
 * CharacterSetをUnicodeに変更
