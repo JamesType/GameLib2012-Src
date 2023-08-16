@@ -2,7 +2,7 @@
 * [公式対応](https://www.shuwasystem.co.jp/support/7980html/2118.html)とは違うもの
 * Visual Studio 2022対応(sln, vcxproj, props)
 * CharacterSetをUnicodeに変更
-* ファイルをUTF-8(BOM)としてエンコード
+* ソースコードファイルをUTF-8(BOM)としてエンコード
 
 ## この中にあるものについて
 この中にはVisual Studio 2022用のサンプルコードその他が入っています。  
